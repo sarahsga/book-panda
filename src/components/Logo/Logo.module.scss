@@ -1,0 +1,12 @@
+@import 'styles/_colors.scss';
+.Logo {
+    height: 100%;
+    background-color: $color-bg-nav-item;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 8px;
+    min-height: 4em;
+    img {
+        height: 100%;
+    }
+}

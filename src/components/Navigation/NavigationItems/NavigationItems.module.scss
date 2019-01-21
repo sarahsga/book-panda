@@ -1,0 +1,18 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+.NavigationItems {
+    display: flex;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+    .NavigationItems {
+        flex-direction: column;
+        padding: 0;
+        li {
+            border-bottom: 1px solid $color-bg-nav-item;
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}

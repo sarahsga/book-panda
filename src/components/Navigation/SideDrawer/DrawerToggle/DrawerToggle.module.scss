@@ -1,0 +1,25 @@
+@import 'styles/_colors.scss';
+@import 'styles/_breakpoints.scss';
+.DrawerToggle {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: $color-bg-nav-item;
+    padding: 1em 2em;
+    border-radius: 5px;
+    [data-icon="bars"] {
+        color: $color-side-drawer;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: $breakpoint-sideDrawerShow + 1) {
+    .DrawerToggle {
+        display: none;
+    }
+}

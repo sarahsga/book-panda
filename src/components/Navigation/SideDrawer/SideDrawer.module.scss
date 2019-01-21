@@ -1,0 +1,52 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+.SideDrawer {
+    transition: transform 0.45s ease, visibility 0.45s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 22em;
+    max-width: 80%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    color: #ffffff;
+    visibility: hidden;
+    background: $color-side-drawer;
+    cursor: default;
+    z-index: 10002; 
+    transform: translateX(0);
+    .Inner {
+        width: calc(100% - 20px);
+        height: 100%;
+        padding: 2.75em;
+        overflow-y: auto;
+        opacity: 0;
+    }
+    h2 {
+        font-weight: 900;
+        line-height: 1.5;
+        margin: 0 0 1em 0;
+        text-transform: uppercase;
+        letter-spacing: 0.35em;
+    }
+    &.Open {
+        transform: translateX(0);
+    }
+    &.Close {
+        transform: translateX(100%);
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+    .SideDrawer {
+        width: 16.5em;
+        visibility: visible;
+        .Inner {
+            opacity: 1;
+            padding: 2.75em 1.5em;
+        }
+        h2 {
+            font-size: 1em;
+        }
+    }
+}
