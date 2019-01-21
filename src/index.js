@@ -5,12 +5,14 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-import booksReducer from './store/reducers/categories'
+import booksReducer from './store/reducers/books'
+import categoryReducer from './store/reducers/categories'
 import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
-  books: booksReducer
+  bk: booksReducer,
+  ctg: categoryReducer
 })
 const store = createStore(rootReducer)
 
