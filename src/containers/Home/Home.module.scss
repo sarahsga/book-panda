@@ -1,0 +1,14 @@
+@import 'styles/_colors.scss';
+.Home {
+    h1 {
+        color: $color-base-dark;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    .Home {
+        h1 {
+            text-align: center;
+        }
+    }
+}

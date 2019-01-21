@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import classes from './App.module.scss'
 import Layout from './hoc/Layout/Layout'
 import { Route, Switch } from 'react-router-dom'
-import CategoryList from './containers/CategoryList/CategoryList'
+import Home from './containers/Home/Home';
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
       <div className={classes.App}>
         <Layout>
           <Switch>
-            <Route path="/" exact component={CategoryList} />
+            <Route path="/" exact component={Home} />
             <Route path="/best-sellers" render={() => <p>Best Sellers</p>} />
             <Route path="/my-cart" render={() => <p>My Cart</p>} />
             <Route path="/request-book" render={() => <p>Request A Book</p>} />

@@ -1,0 +1,18 @@
+$colors-list: #f2849e,
+#7ecaf6,
+#7bd0c1,
+#c75b9b,
+#ae85ca,
+#8499e7;
+.CategoryList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // giving a different background color to each Category Item
+    @each $current-color in $colors-list {
+        $i: index($colors-list, $current-color);
+        article:nth-child(6n + #{$i}) {
+            background-color: $current-color;
+        }
+    }
+}
