@@ -14,7 +14,7 @@ const SideDrawer = props => {
       <nav className={attachedClasses.join(' ')}>
         <div className={classes.Inner}>
           <h2>Menu</h2>
-          <NavigationItems />
+          <NavigationItems itemClicked={props.closed}/>
         </div>
       </nav>
     </>

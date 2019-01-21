@@ -3,20 +3,40 @@ import NavigationItem from './NavigationItem/NavigationItem'
 import classes from './NavigationItems.module.scss'
 
 const NavigationItems = props => {
+  const items = [
+    {
+      label: 'Best Sellers',
+      link: '/best-sellers',
+      isExact: true
+    },
+    {
+      label: 'My Cart',
+      link: '/my-cart',
+      isExact: true
+    },
+    {
+      label: 'Request A Book',
+      link: '/request-book',
+      isExact: true
+    },
+    {
+      label: 'Contact Us',
+      link: '/contact-us',
+      isExact: true
+    }
+  ]
   return (
     <ul className={classes.NavigationItems}>
-      <NavigationItem link="/best-sellers" exact>
-        Best Sellers
-      </NavigationItem>
-      <NavigationItem link="/my-cart" exact>
-        My Cart
-      </NavigationItem>
-      <NavigationItem link="/request-book" exact>
-        Request A Book
-      </NavigationItem>
-      <NavigationItem link="/contact" exact>
-        Contact Us
-      </NavigationItem>
+      {items.map((item, index) => (
+        <NavigationItem
+          key={index}
+          link={item.link}
+          exact={item.isExact}
+          clicked={props.itemClicked}
+        >
+          {item.label}
+        </NavigationItem>
+      ))}
     </ul>
   )
 }

@@ -20,7 +20,9 @@ class Layout extends Component {
   render() {
     return (
       <>
-        <HorizontalNavbar drawerToggleClicked={this.sideDrawerToggleHandler} />
+        <HorizontalNavbar
+          drawerToggleClicked={this.sideDrawerToggleHandler}
+        />
         <SideDrawer
           open={this.state.showSideDrawer}
           closed={this.sideDrawerClosedHandler}

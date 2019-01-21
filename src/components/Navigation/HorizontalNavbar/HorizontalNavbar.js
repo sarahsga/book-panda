@@ -3,14 +3,14 @@ import NavigationItems from '../NavigationItems/NavigationItems'
 import classes from './HorizontalNavbar.module.scss'
 import Logo from './../../Logo/Logo'
 import DrawerToggle from './../SideDrawer/DrawerToggle/DrawerToggle'
+import { NavLink } from 'react-router-dom'
 
 const HorizontalNavbar = props => {
   return (
     <header className={classes.HorizontalNavbar}>
-      {/* <DrawerToggle clicked={props.drawerToggleClicked} /> */}
-      <div className={classes.Logo}>
+      <NavLink to="/" className={classes.Logo} exact>
         <Logo />
-      </div>
+      </NavLink>
 
       <nav className={classes.DesktopOnly}>
         <NavigationItems />
