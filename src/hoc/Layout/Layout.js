@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HorizontalNavbar from '../../components/Navigation/HorizontalNavbar/HorizontalNavbar'
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer'
+import classes from './Layout.module.scss'
 
 class Layout extends Component {
   state = {
@@ -24,6 +25,7 @@ class Layout extends Component {
           open={this.state.showSideDrawer}
           closed={this.sideDrawerClosedHandler}
         />
+        <main className={classes.Content}>{this.props.children}</main>
       </>
     )
   }
