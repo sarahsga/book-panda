@@ -23,7 +23,6 @@ class App extends Component {
               exact
               component={BookDetails}
             />
-            <Route path="/best-sellers" render={() => <p>Best Sellers</p>} />
             <Route path="/my-cart" render={() => <p>My Cart</p>} />
             <Route path="/request-book" render={() => <p>Request A Book</p>} />
             <Route path="/contact" render={() => <p>Contact Us</p>} />

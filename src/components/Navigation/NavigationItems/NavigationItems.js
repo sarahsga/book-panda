@@ -5,13 +5,14 @@ import classes from './NavigationItems.module.scss'
 const NavigationItems = props => {
   const items = [
     {
-      label: 'Best Sellers',
-      link: '/best-sellers',
+      label: 'Categories',
+      link: '/',
       isExact: true
     },
     {
       label: 'My Cart',
       link: '/my-cart',
+      badge: 12,
       isExact: true
     },
     {
@@ -32,6 +33,7 @@ const NavigationItems = props => {
           key={index}
           link={item.link}
           exact={item.isExact}
+          badge={item.badge}
           clicked={props.itemClicked}
         >
           {item.label}
