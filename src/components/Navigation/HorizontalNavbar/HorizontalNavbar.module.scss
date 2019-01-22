@@ -1,5 +1,4 @@
 @import 'styles/_breakpoints.scss';
-@import 'styles/_colors.scss';
 .HorizontalNavbar {
     height: 56px;
     width: 100%;
@@ -12,7 +11,6 @@
     box-sizing: border-box;
     z-index: 90;
     display: flex;
-    background-color: $color-bg-nav-item;
     nav {
         height: 100%;
     }

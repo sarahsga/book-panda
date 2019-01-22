@@ -1,0 +1,54 @@
+@import 'styles/_breakpoints.scss';
+.BookDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 45em;
+    margin: 0 auto;
+    figure {
+        height: 200px;
+        width: 100%;
+        background-size: contain;
+        background-position: top;
+        align-self: flex-start;
+        justify-self: center;
+        background-repeat: no-repeat;
+        margin: 0 0 1em 0;
+        background-color: #ccc;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    // tablet
+    .BookDetails {
+        height: auto;
+        .top {
+            margin-top: 1em;
+            display: flex;
+            align-items: stretch;
+        }
+        figure {
+            margin-right: 1em;
+            height: auto;
+            background-position: center;
+            align-self: auto;
+            margin-bottom: 0;
+            max-width: 300px;
+        }
+        button {
+            svg {
+                margin-right: 1em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+    // Desktop
+    .BookDetails {
+        figure {
+            height: 400px;
+        }
+    }
+}

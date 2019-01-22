@@ -20,7 +20,7 @@ class CategoryList extends Component {
           <CategoryItem
             key={category.id}
             category={category}
-            clicked={this.categoryItemClickedHandler}
+            clicked={this.categoryItemClickedHandler.bind(this, category.id)}
           />
         ))}
       </div>

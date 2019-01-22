@@ -7,7 +7,7 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 const BookItem = props => {
   return (
     <div className={classes.BookItem}>
-      <div className={classes.content}>
+      <div className={classes.content} onClick={props.clicked}>
         <figure>
           <div
             className={classes.image}

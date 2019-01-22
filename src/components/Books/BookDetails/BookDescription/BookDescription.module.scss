@@ -1,0 +1,24 @@
+@import 'styles/_colors.scss';
+.BookDescription {
+    margin: 1em 0;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding: 1em 1em 1em 0;
+    p {
+        color: #222;
+        line-height: 1.6; // transition: all 0.5s;
+        margin: 0;
+        text-align: justify;
+    }
+    p+div {
+        margin-top: 5px;
+    }
+    a {
+        font-size: 15px;
+        color: blue;
+        cursor: pointer;
+        &:hover {
+            color: $color-pink-dark;
+        }
+    }
+}

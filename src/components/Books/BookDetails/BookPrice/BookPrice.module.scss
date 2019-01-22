@@ -1,0 +1,41 @@
+@import 'styles/_colors.scss';
+.BookPrice {
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding: 1em 1em 1em 0;
+    margin-top: 1em;
+    text-align: center;
+    display: inline-block;
+    button {
+        background-color: $color-pink-dark;
+        border: none;
+        padding: 0.7em 3em;
+        border-radius: 2px;
+        color: white;
+        font-weight: bold;
+        width: 100%;
+        cursor: pointer;
+    }
+    p {
+        margin: 5px 0;
+        text-align: left;
+    }
+    .info {
+        display: flex;
+        justify-content: center;
+        width: 210px;
+        margin: 0 auto;
+    }
+    .price {
+        margin-left: 10px;
+        .discountedPrice {
+            color: #B12704;
+            display: flex;
+            flex-direction: column;
+            font-size: 0.7rem;
+            span:first-child {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.AuthorInfo {
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding: 1em 1em 1em 0;
+    margin: 1em 0;
+    .subHeading {
+        text-transform: initial;
+        letter-spacing: 2px;
+        font-weight: normal;
+    }
+    p {
+        margin: 0;
+    }
+    .content {
+        margin-left: 1em;
+        margin-bottom: 1em;
+        span {
+            font-style: italic;
+            color: #444;
+        }
+    }
+}
