@@ -4,6 +4,16 @@ import BookItem from './../../components/Books/BookItem/BookItem'
 import classes from './BookList.module.scss'
 
 class BookList extends Component {
+  state = {
+    books: []
+  }
+
+  componentWillMount = () => {
+    const catId = parseInt(this.props.match.params.categoryId)
+    const books = this.props.books.filter(b => b.categoryId === catId)
+    this.setState({ books })
+  }
+
   modalClosedHandler = () => {
     this.setState({ chosenBook: null })
   }
@@ -16,7 +26,7 @@ class BookList extends Component {
     return (
       <>
         <div className={classes.BookList}>
-          {this.props.books.map(book => (
+          {this.state.books.map(book => (
             <BookItem
               key={book.id}
               book={book}
