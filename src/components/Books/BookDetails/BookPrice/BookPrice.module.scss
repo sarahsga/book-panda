@@ -13,8 +13,8 @@
     }
     .info {
         display: flex;
-        justify-content: center;
-        width: 210px;
+        justify-content: flex-start;
+        width: 250px;
         margin: 0 auto 1em auto;
     }
     .price {
@@ -30,6 +30,9 @@
             font-size: 0.7rem;
             span:first-child {
                 font-size: 1.2rem;
+            }
+            span {
+                text-align: left;
             }
         }
     }
