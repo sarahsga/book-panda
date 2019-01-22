@@ -6,30 +6,33 @@ import { connect } from 'react-redux'
 import Modal from './../../components/UI/Modal/Modal'
 
 class Layout extends Component {
-  state = {
-    showSideDrawer: false,
-    showComingSoon: true,
-    items: [
-      {
-        label: 'Categories',
-        link: '/',
-        isExact: true
-      },
-      {
-        label: 'My Cart',
-        link: '/my-cart',
-        badge: this.props.cart.length || null,
-        isExact: true
-      },
-      {
-        label: 'Request A Book',
-        clicked: this.showComingSoonModal
-      },
-      {
-        label: 'Contact Us',
-        clicked: this.showComingSoonModal
-      }
-    ]
+  componentWillMount() {
+    // Initializing state inside componentWillMount because the this.showComingSoonModal needs to be initialized before setting the state
+    this.setState({
+      showSideDrawer: false,
+      showComingSoon: false,
+      items: [
+        {
+          label: 'Categories',
+          link: '/',
+          isExact: true
+        },
+        {
+          label: 'My Cart',
+          link: '/my-cart',
+          badge: this.props.cart.length || null,
+          isExact: true
+        },
+        {
+          label: 'Request A Book',
+          clicked: this.showComingSoonModal
+        },
+        {
+          label: 'Contact Us',
+          clicked: this.showComingSoonModal
+        }
+      ]
+    })
   }
   componentWillReceiveProps(nextProps) {
     const prevStateItems = this.state.items
@@ -40,7 +43,6 @@ class Layout extends Component {
   }
 
   showComingSoonModal = () => {
-    console.log('sdg')
     this.setState({
       showComingSoon: true
     })

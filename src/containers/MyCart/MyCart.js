@@ -37,6 +37,7 @@ class MyCart extends Component {
     this.setState({
       showModal: false
     })
+    window.scrollTo(0, 0)
   }
 
   render() {

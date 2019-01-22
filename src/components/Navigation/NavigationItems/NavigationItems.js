@@ -3,7 +3,6 @@ import NavigationItem from './NavigationItem/NavigationItem'
 import classes from './NavigationItems.module.scss'
 
 const NavigationItems = props => {
-  
   return (
     <ul className={classes.NavigationItems}>
       {props.items.map((item, index) => (
@@ -12,7 +11,8 @@ const NavigationItems = props => {
           link={item.link}
           exact={item.isExact}
           badge={item.badge}
-          clicked={props.itemClicked}
+          clicked={item.clicked}
+          itemClicked={props.itemClicked}
         >
           {item.label}
         </NavigationItem>

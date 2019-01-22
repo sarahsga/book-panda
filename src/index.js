@@ -10,6 +10,7 @@ import categoryReducer from './store/reducers/categories'
 import cartReducer from './store/reducers/cart'
 import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
+import ScrollToTop from './components/UI/ScrollToTop/ScrollToTop'
 
 const rootReducer = combineReducers({
   bk: booksReducer,
@@ -21,7 +22,9 @@ const store = createStore(rootReducer)
 const app = (
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <ScrollToTop>
+        <App />
+      </ScrollToTop>
     </BrowserRouter>
   </Provider>
 )

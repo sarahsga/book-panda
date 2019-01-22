@@ -16,11 +16,11 @@ const NavigationItem = props => {
       {props.children}
     </NavLink>
   ) : (
-    <a onClick={props.clicked}>{props.children}</a>
+    <a onClick={() => props.clicked()}>{props.children}</a>
   )
 
   return (
-    <li className={classes.NavigationItem} onClick={props.clicked}>
+    <li className={classes.NavigationItem} onClick={props.itemClicked}>
       {badge}
       {content}
     </li>
