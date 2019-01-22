@@ -7,6 +7,7 @@ import BookBasicInfo from './BookBasicInfo/BookBasicInfo'
 import BookDescription from './BookDescription/BookDescription'
 import ProductDetails from './ProductDetails/ProductDetails'
 import AuthorInfo from './AuthorInfo/AuthorInfo'
+import * as actionTypes from './../../../store/actions'
 
 class BookDetails extends Component {
   state = {
@@ -42,7 +43,12 @@ class BookDetails extends Component {
             />
             <BookPrice
               price={this.state.chosenBook.price}
+              isInCart={
+                this.props.cart.filter(cartItem => cartItem.id === this.state.chosenBook.id)
+                  .length
+              }
               discount={this.state.chosenBook.discountPercentage}
+              addToCart={this.props.addToCart.bind(this, this.state.chosenBook)}
             />
           </section>
         </section>
@@ -57,8 +63,16 @@ class BookDetails extends Component {
   }
 }
 
-const mapPropsToState = state => ({
-  books: state.bk.books
+const mapStateToProps = state => ({
+  books: state.bk.books,
+  cart: state.cart.cart
 })
 
-export default connect(mapPropsToState)(withRouter(BookDetails))
+const mapDispatchToProps = dispatch => ({
+  addToCart: book => dispatch({ type: actionTypes.ADD_TO_CART, book })
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(BookDetails))

@@ -26,10 +26,10 @@ const ProductDetails = props => {
         <strong>ShippingWeight: </strong>
         {props.book.shippingWeight}
       </p>
-      <p>
+      <div>
         <strong>Average Customer Review: </strong>
         <StarRating rating={props.book.rating} />
-      </p>
+      </div>
     </div>
   )
 }

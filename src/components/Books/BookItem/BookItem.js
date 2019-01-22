@@ -1,8 +1,7 @@
 import React from 'react'
 import classes from './BookItem.module.scss'
 import StarRating from '../../UI/StarRating/StarRating'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import AddToCartBtn from '../../UI/AddToCartBtn/AddToCartBtn';
 
 const BookItem = props => {
   return (
@@ -24,10 +23,7 @@ const BookItem = props => {
           <StarRating rating={props.book.rating} />
         </div>
       </div>
-      <div className={classes.cartBtn}>
-        <FontAwesomeIcon icon={faCartPlus} />
-        Add To Cart
-      </div>
+      <AddToCartBtn isInCart={props.isInCart} clicked={props.addToCart} />
     </div>
   )
 }

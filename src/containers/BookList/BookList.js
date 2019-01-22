@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import BookItem from './../../components/Books/BookItem/BookItem'
 import classes from './BookList.module.scss'
+import * as actionTypes from './../../store/actions'
 
 class BookList extends Component {
   state = {
@@ -30,7 +31,12 @@ class BookList extends Component {
             <BookItem
               key={book.id}
               book={book}
+              isInCart={
+                this.props.cart.filter(cartItem => cartItem.id === book.id)
+                  .length
+              }
               clicked={this.bookItemClickHandler.bind(this, book.id)}
+              addToCart={this.props.addToCart.bind(this,book)}
             />
           ))}
         </div>
@@ -40,7 +46,12 @@ class BookList extends Component {
 }
 
 const mapStateToProps = state => ({
-  books: state.bk.books
+  books: state.bk.books,
+  cart: state.cart.cart
 })
 
-export default connect(mapStateToProps)(BookList)
+const mapDispatchToProps = dispatch => ({
+  addToCart: book => dispatch({ type: actionTypes.ADD_TO_CART, book })
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookList)

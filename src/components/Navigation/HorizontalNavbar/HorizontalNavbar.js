@@ -13,7 +13,7 @@ const HorizontalNavbar = props => {
       </NavLink>
 
       <nav className={classes.DesktopOnly}>
-        <NavigationItems />
+        <NavigationItems items={props.items}/>
       </nav>
       <DrawerToggle clicked={props.drawerToggleClicked} />
     </header>

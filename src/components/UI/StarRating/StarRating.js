@@ -9,7 +9,6 @@ import classes from './StarRating.module.scss'
 
 const StarRating = props => {
   const rating = props.rating // float rating (Ex: 3.7)
-  console.log('​rating', rating)
   const ratingInt = parseInt(rating) // integer part of float (Ex: 3) ::::: # of full stars
   const ratingDec = rating - ratingInt // decimal part of float (Ex: 0.7) ::::: # of half stars
   const ratingRem = parseInt(5 - rating) // integer part of the difference (Ex: 1) ::::: # of empty stars

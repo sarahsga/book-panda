@@ -43,23 +43,4 @@
             margin-top: 1em;
         }
     }
-    .cartBtn {
-        background-color: $color-pink;
-        color: white;
-        text-align: center;
-        height: 50px;
-        font-weight: bold;
-        line-height: 50px;
-        cursor: pointer;
-        transition: background-color 0.5s;
-        &>div {
-            text-align: center;
-        }
-        svg {
-            margin-right: 1em;
-        }
-        &:hover {
-            background-color: $color-pink-dark;
-        }
-    }
 }

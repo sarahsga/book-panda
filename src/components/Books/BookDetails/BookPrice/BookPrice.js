@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import classes from './BookPrice.module.scss'
+import AddToCartBtn from '../../../UI/AddToCartBtn/AddToCartBtn'
 
 class BookPrice extends Component {
   getDiscountedPrice = () => {
@@ -21,22 +20,19 @@ class BookPrice extends Component {
           <p className={classes.head}>
             <strong>Paperback Price</strong>
           </p>
-          <p className={classes.price}>
-            <s>$&nbsp;{this.props.price}</s>&nbsp;
+          <div className={classes.price}>
+            <s>$ {this.props.price}</s>
             <div className={classes.discountedPrice}>
-              <span>
-                {' '}
-                $&nbsp;
-                {this.getDiscountedPrice()}
-              </span>
+              <span>$ {this.getDiscountedPrice()}</span>
               <span>Save ${this.getMoneySaved()} (10%)</span>
             </div>
-          </p>
+          </div>
         </div>
-        <button>
-          <FontAwesomeIcon icon={faCartPlus} />
-          <span>Add to Cart</span>
-        </button>
+        <AddToCartBtn
+          height="40"
+          isInCart={this.props.isInCart}
+          clicked={this.props.addToCart}
+        />
       </section>
     )
   }

@@ -41,7 +41,7 @@ const initialState = {
       discountPercentage: 50,
       url:
         'https://www.amazon.com/Muslims-World-Portraits-Stories-Survival/dp/141973248X/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=',
-      rating: 2.9
+      rating: 4.5
     },
     {
       id: 2,

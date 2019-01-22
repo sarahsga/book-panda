@@ -7,12 +7,14 @@ import App from './App'
 import * as serviceWorker from './serviceWorker'
 import booksReducer from './store/reducers/books'
 import categoryReducer from './store/reducers/categories'
+import cartReducer from './store/reducers/cart'
 import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
   bk: booksReducer,
-  ctg: categoryReducer
+  ctg: categoryReducer,
+  cart: cartReducer
 })
 const store = createStore(rootReducer)
 
