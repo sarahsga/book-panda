@@ -1,3 +1,8 @@
+@import 'styles/_colors.scss';
 .CheckoutForm {
-    
+    max-width: 400px;
+    .checkoutBtn {
+        width: 200px;
+        margin-top: 1em;
+    }
 }

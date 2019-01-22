@@ -1,0 +1,28 @@
+@import 'styles/_colors.scss';
+.Button {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    transition: background-color 0.5s;
+    &>div {
+        text-align: center;
+    }
+    svg {
+        margin-right: 1em;
+    }
+    &.enabled {
+        background-color: $color-pink;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-pink-dark;
+        }
+    }
+    &.disabled {
+        background-color: #94b0a0;
+        cursor: default;
+    }
+}

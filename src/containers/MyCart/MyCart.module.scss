@@ -14,23 +14,44 @@
         font-weight: normal;
         margin-bottom: 0;
     }
-    
-    // .checkoutBtn {
-    //     color: white;
-    //     font-weight: bold;
-    //     grid-column: 2 / 4;
-    //     margin-right: 0.2em;
-    //     div {
-    //         background-color: $color-pink;
-    //         display: inline-flex;
-    //         padding: 0.5em 3em;
-    //         align-items: center;
-    //         justify-content: center;
-    //         cursor: pointer;
-    //         transition: background-color 0.3s;
-    //         &:hover {
-    //             background-color: $color-pink-dark;
-    //         }
-    //     }
-    // }
+    &.noData {
+        &,
+        &>* {
+            text-align: center;
+            margin: 0 auto;
+        }
+        .image {
+            background-image: url('./../../assets/images/panda-cry.png');
+            background-size: contain;
+            height: 7em;
+            width: 7em;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 1em auto;
+        }
+    }
+    .modalContent {
+        svg {
+            color: #7bd0c1;
+            font-size: 7em;
+        }
+        h1 {
+            font-size: 1.5em;
+        }
+        .logoText {
+            background-image: url(./../../assets/images/logo-text-only.png);
+            height: 2em;
+            width: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+@media screen and (min-height: 500px) {
+    .MyCart.noData {
+        margin-top: 10em;
+    }
 }
