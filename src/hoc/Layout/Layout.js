@@ -3,10 +3,12 @@ import HorizontalNavbar from '../../components/Navigation/HorizontalNavbar/Horiz
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer'
 import classes from './Layout.module.scss'
 import { connect } from 'react-redux'
+import Modal from './../../components/UI/Modal/Modal'
 
 class Layout extends Component {
   state = {
     showSideDrawer: false,
+    showComingSoon: true,
     items: [
       {
         label: 'Categories',
@@ -21,13 +23,11 @@ class Layout extends Component {
       },
       {
         label: 'Request A Book',
-        link: '/request-book',
-        isExact: true
+        clicked: this.showComingSoonModal
       },
       {
         label: 'Contact Us',
-        link: '/contact-us',
-        isExact: true
+        clicked: this.showComingSoonModal
       }
     ]
   }
@@ -36,6 +36,19 @@ class Layout extends Component {
     prevStateItems[1].badge = nextProps.cart.length || null
     this.setState({
       items: prevStateItems
+    })
+  }
+
+  showComingSoonModal = () => {
+    console.log('sdg')
+    this.setState({
+      showComingSoon: true
+    })
+  }
+
+  closeModal = () => {
+    this.setState({
+      showComingSoon: false
     })
   }
 
@@ -62,6 +75,12 @@ class Layout extends Component {
           closed={this.sideDrawerClosedHandler}
         />
         <main className={classes.Content}>{this.props.children}</main>
+        <Modal show={this.state.showComingSoon} modalClosed={this.closeModal}>
+          <div className={classes.comingSoon}>
+            <h2>This feature is</h2>
+            <div className={classes.comingSoonImg} />
+          </div>
+        </Modal>
       </>
     )
   }

@@ -7,16 +7,22 @@ const NavigationItem = props => {
     <span className={classes.badge}>{props.badge}</span>
   ) : null
 
+  const content = props.link ? (
+    <NavLink
+      to={props.link}
+      activeClassName={classes.active}
+      exact={props.exact}
+    >
+      {props.children}
+    </NavLink>
+  ) : (
+    <a onClick={props.clicked}>{props.children}</a>
+  )
+
   return (
     <li className={classes.NavigationItem} onClick={props.clicked}>
       {badge}
-      <NavLink
-        to={props.link}
-        activeClassName={classes.active}
-        exact={props.exact}
-      >
-        {props.children}
-      </NavLink>
+      {content}
     </li>
   )
 }

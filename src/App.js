@@ -5,7 +5,7 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import Home from './containers/Home/Home'
 import BookList from './containers/BookList/BookList'
 import BookDetails from './components/Books/BookDetails/BookDetails'
-import MyCart from './containers/MyCart/MyCart';
+import MyCart from './containers/MyCart/MyCart'
 
 class App extends Component {
   render() {

@@ -2,7 +2,6 @@
 @import 'styles/_colors.scss';
 .NavigationItem {
     display: block;
-    padding: 1em 0;
     line-height: 1.5;
     border: 0;
     position: relative;
@@ -10,6 +9,9 @@
         text-decoration: none;
         color: inherit;
         transition: color 0.2s ease;
+        display: inline-block;
+        padding: 1em 0;
+        width: 100%;
         &:hover,
         &:active,
         &.active {
@@ -61,8 +63,6 @@
     .NavigationItem {
         a {
             font-size: 0.9em;
-            font-weight: 900;
-            letter-spacing: 0.2em;
             font-weight: 900;
             letter-spacing: 0.2em;
         }
