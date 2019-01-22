@@ -1,3 +1,4 @@
+@import 'styles/_colors.scss';
 .AuthorInfo {
     border-top: 2px solid #ddd;
     border-bottom: 2px solid #ddd;
@@ -17,7 +18,7 @@
         span {
             font-weight: bold;
             font-style: italic;
-            color: #444;
+            color: $color-base-dark;
         }
     }
 }

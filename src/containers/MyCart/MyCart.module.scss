@@ -1,0 +1,36 @@
+@import 'styles/_colors.scss';
+.MyCart {
+    max-width: 600px;
+    margin: auto;
+    h1 {
+        // text-align: center;
+        color: $color-base-dark;
+        padding-top: 1em;
+    }
+    h2 {
+        text-transform: none;
+        letter-spacing: normal;
+        font-size: 1.5em;
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+    
+    // .checkoutBtn {
+    //     color: white;
+    //     font-weight: bold;
+    //     grid-column: 2 / 4;
+    //     margin-right: 0.2em;
+    //     div {
+    //         background-color: $color-pink;
+    //         display: inline-flex;
+    //         padding: 0.5em 3em;
+    //         align-items: center;
+    //         justify-content: center;
+    //         cursor: pointer;
+    //         transition: background-color 0.3s;
+    //         &:hover {
+    //             background-color: $color-pink-dark;
+    //         }
+    //     }
+    // }
+}

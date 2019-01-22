@@ -1,0 +1,43 @@
+@import 'styles/_breakpoints.scss';
+.BookInfoCell {
+    display: flex;
+    figure {
+        margin: 0; // background-color: #ccc;
+        padding: 0 1px;
+        .image {
+            border: 1px solid #ddd;
+            height: 4.5em;
+            width: 3em;
+            border-radius: 2px;
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 0 1em;
+        .bookName {
+            margin: 0;
+            font-weight: bold;
+        }
+        p {
+            margin: 0;
+        }
+        .authors {
+            font-size: 0.95em;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+    .BookInfoCell {
+        .info {
+            p {
+                padding-right: 1em;
+            }
+        }
+    }
+}

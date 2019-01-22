@@ -1,18 +1,9 @@
 import React, { Component } from 'react'
 import classes from './BookPrice.module.scss'
 import AddToCartBtn from '../../../UI/AddToCartBtn/AddToCartBtn'
+import * as utils from './../../../../utils'
 
 class BookPrice extends Component {
-  getDiscountedPrice = () => {
-    return (
-      this.props.price -
-      (this.props.discount / 100) * this.props.price
-    ).toFixed(2)
-  }
-
-  getMoneySaved = () => {
-    return ((this.props.discount / 100) * this.props.price).toFixed(2)
-  }
   render() {
     return (
       <section className={classes.BookPrice}>
@@ -23,8 +14,18 @@ class BookPrice extends Component {
           <div className={classes.price}>
             <s>$ {this.props.price}</s>
             <div className={classes.discountedPrice}>
-              <span>$ {this.getDiscountedPrice()}</span>
-              <span>Save ${this.getMoneySaved()} (10%)</span>
+              <span>
+                ${' '}
+                {utils.getDiscountedPrice(
+                  this.props.price,
+                  this.props.discount
+                )}
+              </span>
+              <span>
+                Save $
+                {utils.getMoneySaved(this.props.price, this.props.discount)} (
+                {this.props.discount} %)
+              </span>
             </div>
           </div>
         </div>

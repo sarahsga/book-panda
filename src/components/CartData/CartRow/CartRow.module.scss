@@ -1,0 +1,9 @@
+@import 'styles/_colors.scss';
+    .cell {
+        color: $color-base-dark;
+        background-color: white;
+        padding: 0.5em;
+        &.count {
+            text-align: center;
+        }
+    }
