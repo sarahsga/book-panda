@@ -8,6 +8,7 @@ $colors-list: #f2849e,
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 3em;
     // giving a different background color to each Category Item
     @each $current-color in $colors-list {
         $i: index($colors-list, $current-color);
