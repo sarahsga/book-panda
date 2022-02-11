@@ -1,4 +1,4 @@
-# Book Panda
+# [Book Panda](https://book-panda.firebaseapp.com/categories)
 
 This was my first ReactJS project, designed and developed by me to practice my knowledge in ReactJS. It is based on a hypothetical book shop called Book Panda, where you can purchase books online after reading reviews by other customers.
 
