@@ -6,14 +6,15 @@ import * as actionTypes from "./../../store/actions";
 import { useRouter } from "next/router";
 
 function BookList(props) {
-  const { query, push, pathname } = useRouter();
+  const { query, push, isReady } = useRouter();
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
+    if (!isReady) return;
     const catId = parseInt(query.categoryId);
     const books = props.books.filter((b) => b.categoryId === catId);
     setBooks(books);
-  }, []);
+  }, [isReady]);
 
   function bookItemClickHandler(bookId) {
     console.log({ bookId }, query);

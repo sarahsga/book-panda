@@ -8,7 +8,6 @@ import CheckoutForm from './CheckoutForm/CheckoutForm'
 import Modal from '../../components/UI/Modal/Modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
-import Logo from '../../components/Logo/Logo'
 
 class MyCart extends Component {
   state = {

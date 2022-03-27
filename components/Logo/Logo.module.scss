@@ -6,7 +6,10 @@
     border-radius: 5px;
     padding: 8px;
     min-height: 4em;
-    img {
-        height: 100%;
+    position: relative;
+    width: 100px;
+    .img {
+        margin-top: 8px;
+        padding: 8px;
     }
 }

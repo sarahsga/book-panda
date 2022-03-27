@@ -11,20 +11,21 @@ import { useRouter } from "next/router";
 
 function BookDetails(props) {
   const [chosenBook, setChosenBook] = useState(null);
-  const { query } = useRouter();
+  const { isReady, query } = useRouter();
 
   useEffect(() => {
+    if (!isReady) return;
     const catId = parseInt(query.categoryId);
     const bookId = parseInt(query.bookId);
 
-    console.log(query,catId, bookId)
+    console.log(query, catId, bookId);
     const booksByCatId = props.books.filter((b) => b.categoryId === catId);
     const chosenBooksArr = booksByCatId.filter((b) => b.id === bookId);
 
     setChosenBook(
       chosenBooksArr && chosenBooksArr.length ? chosenBooksArr.pop() : null
     );
-  }, []);
+  }, [isReady]);
 
   if (!chosenBook) return <div />;
 

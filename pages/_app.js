@@ -1,4 +1,6 @@
-// import '../styles/globals.css'
+import '../styles/_breakpoints.scss'
+import '../styles/_colors.scss'
+import '../styles/globals.css'
 
 import { Provider } from "react-redux";
 import { combineReducers, createStore } from "redux";

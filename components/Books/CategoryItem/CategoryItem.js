@@ -7,7 +7,10 @@ const CategoryItem = props => {
   return (
     <article className={classes.CategoryItem} onClick={props.clicked}>
       <span className={classes.image}>
-        <Image layout='fill' src="/images/bg-book-category-tile.jpg" alt={props.category.label} />
+        <Image
+         layout="fill"
+         objectFit='contain'
+          src="/images/bg-book-category-tile.jpg" alt={props.category.label} />
       </span>
       <Link href="/">
         <h2>{props.category.label}</h2>

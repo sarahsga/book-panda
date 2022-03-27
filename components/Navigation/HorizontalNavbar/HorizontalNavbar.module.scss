@@ -20,6 +20,9 @@
     .DesktopOnly {
         display: none;
     }
+    li a {
+        padding: 0;
+    }
 }
 
 @media screen and (min-width: $breakpoint-tablet + 1px) {
