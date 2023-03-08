@@ -12,6 +12,7 @@ I have used the following tools for the development of Book-Panda
 3. Redux
 4. SASS
 5. Firebase (for deployment)
+6. [Pnpm](https://pnpm.io/) package manger 
 
 **NOTE: The website does not use any templates - all the UI design and development work was done by me.**
 
