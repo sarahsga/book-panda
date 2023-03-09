@@ -6,6 +6,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+    /* https://stackoverflow.com/a/75686173/4380666 */
+    box-sizing: border-box;
+}
+
 #root {
     background-color: #eeeeee7a;
 }
