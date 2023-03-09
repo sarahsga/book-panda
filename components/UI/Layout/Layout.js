@@ -14,7 +14,7 @@ class Layout extends Component {
       items: [
         {
           label: 'Categories',
-          link: '/',
+          link: '/categories',
           isExact: true
         },
         {
