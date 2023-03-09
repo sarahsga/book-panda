@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Logo.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const logo = (props) => (
   <div className={classes.Logo}>
