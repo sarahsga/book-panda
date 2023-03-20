@@ -19,7 +19,7 @@ function CategoryList(props) {
         <CategoryItem
           key={category.id}
           category={category}
-          clicked={categoryItemClickedHandler.bind(this, category.id)}
+          clicked={() => categoryItemClickedHandler(category.id)}
         />
       ))}
     </div>

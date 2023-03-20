@@ -6,10 +6,40 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
+* {
+    /* https://stackoverflow.com/a/75686173/4380666 */
+    box-sizing: border-box;
+}
+
+#root, #__next {
     background-color: #eeeeee7a;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    color: #222;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 900;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+h2 {
+    font-size: 1.1em;
 }

@@ -1,16 +1,24 @@
 import Link from 'next/link'
-import React from 'react'
+import { useRouter } from 'next/router';
+import React, { useMemo } from 'react'
 import classes from './NavigationItem.module.scss'
 
 const NavigationItem = props => {
   const badge = props.badge ? (
     <span className={classes.badge}>{props.badge}</span>
-  ) : null
+  ) : null;
+
+  const { asPath, isReady, } = useRouter();
+
+
+  const isActive = useMemo(() => {
+    return asPath === props.link;
+  }, [asPath])
 
   const content = props.link ? (
     <Link
       href={props.link}
-      activeClassName={classes.active}
+      className={isActive ? classes.active : ""}
       exact={props.exact}
     >
       {props.children}
