@@ -12,7 +12,6 @@ const NavigationItem = props => {
 
 
   const isActive = useMemo(() => {
-    console.log(asPath, props.link);
     return asPath === props.link;
   }, [asPath])
 
