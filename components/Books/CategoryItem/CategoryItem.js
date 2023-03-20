@@ -10,11 +10,9 @@ const CategoryItem = props => {
         <img
           src="/images/bg-book-category-tile.jpg"
           alt={props.category.label}
-           />
+        />
       </span>
-      <Link href="/">
-        <h2>{props.category.label}</h2>
-      </Link>
+      <h2>{props.category.label}</h2>
     </article>
   );
 }
